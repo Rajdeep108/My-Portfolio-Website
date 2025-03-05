@@ -19,21 +19,10 @@ def entire_sidebar():
         with t2:
             st.text("Rajdeep Roshan Sahu")
         
-        My social media links
-        c0,c1,c2,c3 = st.columns([0.2,1,1,1],gap='small')
-        with c0:
-            st.write("")
-        with c1:
-            icon_button(icon_path="assets/icons/linkedin_icon.svg",url="https://www.linkedin.com/in/rajdeep-roshan-sahu",width=28)
-        with c2:
-            icon_button(icon_path="assets/icons/github_icon.svg",url='https://www.github.com/Rajdeep108',width=33)
-        with c3:
-            icon_button(icon_path="assets/icons/youtube_icon.svg",url='https://www.youtube.com/@Madhouseproductions',width=28)
-
-
-        st.markdown(icons_html, unsafe_allow_html=True)
-
+        # My social media links
+        icon_buttons3(icon_path1="assets/icons/linkedin_icon.svg",icon_path2="assets/icons/github_icon.svg",icon_path3="assets/icons/youtube_icon.svg")
         vertical_space(2)
+        
         st.subheader("Navigate")
         scroll_navbar(anchor_ids=["Home-Page"],anchor_icons=["house"],anchor_labels=["Home-Page"],key='Landing Page')
 
