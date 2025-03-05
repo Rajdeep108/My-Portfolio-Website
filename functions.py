@@ -14,6 +14,12 @@ def hide_default_streamlit():
                 <style>
                 #MainMenu {visibility: hidden;}
                 footer {visibility: hidden;}
+
+                /* Dark mode styles */
+                body { background-color: #121212; color: #E1E1E1; }
+                .stApp { background-color: #121212; color: #E1E1E1; }
+                .stButton>button { background-color: #BB86FC; color: white; }
+                .stTextInput>div>div>input { background-color: #1E1E1E; color: white; }
                 </style>
                 """
     return st.markdown(hide_streamlit_style, unsafe_allow_html=True)
