@@ -60,3 +60,4 @@ def entire_sidebar():
                 }
             }
         </style>
+        """, unsafe_allow_html=True)
