@@ -308,36 +308,53 @@ def slide_images(paths):
 
     # Custom CSS for dynamic slider
     slide_animation = f"""
-    <style>
-    .slider-container {{
-        width: 100%;
-        overflow: hidden;
-        position: relative;
-        height: auto; /* Dynamically adjusts to image height */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: black; /* Avoid blank spaces */
-    }}
+<style>
+.slider-container {{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: auto; /* Dynamically adjusts to image height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black; /* Avoid blank spaces */
+}}
 
-    .slider {{
-        display: flex;
-        width: {100 * num_images}%;
-        animation: slide {animation_duration}s infinite ease-in-out;
-    }}
+.slider {{
+    display: flex;
+    width: {100 * num_images}%;
+    animation: slide {animation_duration}s infinite ease-in-out;
+}}
 
-
+.slider img {{
+    width: auto;
+    height: 100vh; /* Makes sure the full image is visible */
+    max-height: 500px; /* Adjust this if needed */
+    object-fit: contain; /* Ensures the full image is visible */
+    background-color: black; /* Avoid blank areas */
+}}
   
-    @keyframes slide {{
-        0% {{ transform: translateX(0%); }}
-        {"".join(f"{(i+1)*(100/num_images)}% {{ transform: translateX(-{(i+1)*(100/num_images)+50}%);}} " for i in range(num_images))}
-        100% {{ transform: translateX(0%); }}
-    }}
-    </style>
-    """
+@keyframes slide {{
+    0% {{ transform: translateX(0%); }}
+    {"".join(f"{(i+1)*(100/num_images)}% {{ transform: translateX(-{(i+1)*(100/num_images)+21.5}%);}} " for i in range(num_images))}
+    100% {{ transform: translateX(0%); }}
+}}
+</style>
+"""
 
     # Display in Streamlit
     st.markdown(slide_animation, unsafe_allow_html=True)
+
+    # Generate HTML for image slider with base64 images
+    slider_html = f"""
+    <div class="slider-container">
+        <div class="slider">
+            {"".join(f'<img src="data:image/jpeg;base64,{img}" alt="Image">' for img in base64_images)}
+        </div>
+    </div>
+    """
+
+    st.markdown(slider_html, unsafe_allow_html=True)
 
 def custom_anchor(anchor):
         return st.markdown(f'<div id="{anchor}"></div>', unsafe_allow_html=True)
