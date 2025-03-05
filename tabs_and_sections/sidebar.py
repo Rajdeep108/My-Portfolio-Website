@@ -50,3 +50,13 @@ def entire_sidebar():
                         key= "VFX navigation" )
             
         scroll_navbar(anchor_ids=["Contact Me"],anchor_icons=["person-lines-fill"],anchor_labels=["Contact"],key="Contact navigation")
+        st.markdown("""
+        <style>
+            @media screen and (max-width: 768px) {
+                [data-testid="stSidebarContent"] {
+                    height: 75vh !important;
+                    max-height: 75vh !important;
+                    overflow-y: scroll !important;
+                }
+            }
+        </style>
