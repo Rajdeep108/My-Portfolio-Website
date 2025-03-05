@@ -30,20 +30,42 @@ def entire_sidebar():
         # with c3:
         #     icon_button(icon_path="assets/icons/youtube_icon.svg",url='https://www.youtube.com/@Madhouseproductions',width=28)
 
-        icons_html = f"""
-        <div style="
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            gap: 15px; 
-            margin-top: 10px;
-            flex-wrap: wrap; /* Ensures responsiveness */
-        ">
-            {icon_button("assets/icons/linkedin_icon.svg", "https://www.linkedin.com/in/rajdeep-roshan-sahu", width=28)}
-            {icon_button("assets/icons/github_icon.svg", "https://www.github.com/Rajdeep108", width=33)}
-            {icon_button("assets/icons/youtube_icon.svg", "https://www.youtube.com/@Madhouseproductions", width=28)}
+
+# Define the icon layout with HTML and CSS
+        icons_html = """
+        <style>
+            .icon-container {
+                display: flex;
+                justify-content: center; /* Centers icons horizontally */
+                align-items: center;
+                gap: 15px; /* Adds spacing between icons */
+                flex-wrap: wrap; /* Allows wrapping on small screens */
+                margin-top: 10px;
+            }
+            .icon-container a {
+                display: inline-block;
+            }
+            .icon-container img {
+                width: 30px; /* Adjust icon size */
+                height: auto;
+            }
+        </style>
+    
+        <div class="icon-container">
+            <a href="https://www.linkedin.com/in/rajdeep-roshan-sahu" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png">
+            </a>
+            <a href="https://www.github.com/Rajdeep108" target="_blank">
+                <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png">
+            </a>
+            <a href="https://www.youtube.com/@Madhouseproductions" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg">
+            </a>
         </div>
-        """
+    """
+    # Render icons in Streamlit
+    st.markdown(icons_html, unsafe_allow_html=True)
+
 
 st.markdown(icons_html, unsafe_allow_html=True)
 
