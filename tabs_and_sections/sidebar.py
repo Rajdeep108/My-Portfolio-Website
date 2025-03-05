@@ -20,15 +20,25 @@ def entire_sidebar():
             st.text("Rajdeep Roshan Sahu")
         
         # My social media links
-        c0,c1,c2,c3 = st.columns([0.2,1,1,1],gap='small')
-        with c0:
-            st.write("")
-        with c1:
-            icon_button(icon_path="assets/icons/linkedin_icon.svg",url="https://www.linkedin.com/in/rajdeep-roshan-sahu",width=28)
-        with c2:
-            icon_button(icon_path="assets/icons/github_icon.svg",url='https://www.github.com/Rajdeep108',width=33)
-        with c3:
-            icon_button(icon_path="assets/icons/youtube_icon.svg",url='https://www.youtube.com/@Madhouseproductions',width=28)
+        # c0,c1,c2,c3 = st.columns([0.2,1,1,1],gap='small')
+        # with c0:
+        #     st.write("")
+        # with c1:
+        #     icon_button(icon_path="assets/icons/linkedin_icon.svg",url="https://www.linkedin.com/in/rajdeep-roshan-sahu",width=28)
+        # with c2:
+        #     icon_button(icon_path="assets/icons/github_icon.svg",url='https://www.github.com/Rajdeep108',width=33)
+        # with c3:
+        #     icon_button(icon_path="assets/icons/youtube_icon.svg",url='https://www.youtube.com/@Madhouseproductions',width=28)
+
+        icons_html = f"""
+        <div style="display: flex; justify-content: center; align-items: center; gap: 15px;">
+            {icon_button("assets/icons/linkedin_icon.svg", "https://www.linkedin.com/in/rajdeep-roshan-sahu", width=28)}
+            {icon_button("assets/icons/github_icon.svg", "https://www.github.com/Rajdeep108", width=33)}
+            {icon_button("assets/icons/youtube_icon.svg", "https://www.youtube.com/@Madhouseproductions", width=28)}
+        </div>
+        """
+        
+        st.markdown(icons_html, unsafe_allow_html=True)
 
         vertical_space(2)
         st.subheader("Navigate")
