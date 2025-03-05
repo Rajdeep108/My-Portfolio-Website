@@ -26,7 +26,7 @@ def home_page_section():
     with column1:
         vertical_space(4)
         st.write("# Rajdeep Roshan")
-        kol1,kol2,kol3 = st.columns([0.23,1.57,0.1])
+        kol1,kol2,kol3 = st.columns([0.23,1.57,0.02])
         with kol1:
              st.write("#### I'm ")
         with kol2:
