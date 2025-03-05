@@ -9,7 +9,7 @@ def entire_sidebar():
     with st.sidebar:
 
         #My round face
-        round_image = Image.open(r"assets\pictures\me2.png")
+        round_image = Image.open("assets/pictures/me2.png")
         col1, col2, col3 = st.columns([0.8, 2, 1])
         with col2: 
             st.image(round_image, width=150)
@@ -24,11 +24,11 @@ def entire_sidebar():
         with c0:
             st.write("")
         with c1:
-            icon_button(icon_path=r"assets\icons\linkedin_icon.svg",url="https://www.linkedin.com/in/rajdeep-roshan-sahu",width=28)
+            icon_button(icon_path="assets/icons/linkedin_icon.svg",url="https://www.linkedin.com/in/rajdeep-roshan-sahu",width=28)
         with c2:
-            icon_button(icon_path=r"assets\icons\github_icon.svg",url='https://www.github.com/Rajdeep108',width=33)
+            icon_button(icon_path="assets/icons/github_icon.svg",url='https://www.github.com/Rajdeep108',width=33)
         with c3:
-            icon_button(icon_path=r"assets\icons\youtube_icon.svg",url='https://www.youtube.com/@Madhouseproductions',width=28)
+            icon_button(icon_path="assets/icons/youtube_icon.svg",url='https://www.youtube.com/@Madhouseproductions',width=28)
 
         vertical_space(2)
         st.subheader("Navigate")
