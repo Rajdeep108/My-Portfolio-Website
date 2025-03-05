@@ -329,14 +329,14 @@ def slide_images(paths):
 .slider img {{
     width: 100%;
     height: auto; /* Makes sure the full image is visible */
-    max-height: 500px; /* Adjust this if needed */
+    
     object-fit: contain; /* Ensures the full image is visible */
     background-color: black; /* Avoid blank areas */
 }}
   
 @keyframes slide {{
     0% {{ transform: translateX(0%); }}
-    {"".join(f"{(i+1)*(100/num_images)}% {{ transform: translateX(-{(i+1)*(100/num_images)+21.5}%);}} " for i in range(num_images))}
+    {"".join(f"{(i+1)*(100/num_images)}% {{ transform: translateX(-{(i+1)*(100/num_images)}%);}} " for i in range(num_images))}
     100% {{ transform: translateX(0%); }}
 }}
 </style>
