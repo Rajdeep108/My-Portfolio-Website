@@ -31,14 +31,21 @@ def entire_sidebar():
         #     icon_button(icon_path="assets/icons/youtube_icon.svg",url='https://www.youtube.com/@Madhouseproductions',width=28)
 
         icons_html = f"""
-        <div style="display: flex; justify-content: center; align-items: center; gap: 15px;">
+        <div style="
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            gap: 15px; 
+            margin-top: 10px;
+            flex-wrap: wrap; /* Ensures responsiveness */
+        ">
             {icon_button("assets/icons/linkedin_icon.svg", "https://www.linkedin.com/in/rajdeep-roshan-sahu", width=28)}
             {icon_button("assets/icons/github_icon.svg", "https://www.github.com/Rajdeep108", width=33)}
             {icon_button("assets/icons/youtube_icon.svg", "https://www.youtube.com/@Madhouseproductions", width=28)}
         </div>
         """
-        
-        st.markdown(icons_html, unsafe_allow_html=True)
+
+st.markdown(icons_html, unsafe_allow_html=True)
 
         vertical_space(2)
         st.subheader("Navigate")
