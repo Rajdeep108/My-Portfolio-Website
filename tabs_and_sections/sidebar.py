@@ -19,52 +19,19 @@ def entire_sidebar():
         with t2:
             st.text("Rajdeep Roshan Sahu")
         
-        # My social media links
-        # c0,c1,c2,c3 = st.columns([0.2,1,1,1],gap='small')
-        # with c0:
-        #     st.write("")
-        # with c1:
-        #     icon_button(icon_path="assets/icons/linkedin_icon.svg",url="https://www.linkedin.com/in/rajdeep-roshan-sahu",width=28)
-        # with c2:
-        #     icon_button(icon_path="assets/icons/github_icon.svg",url='https://www.github.com/Rajdeep108',width=33)
-        # with c3:
-        #     icon_button(icon_path="assets/icons/youtube_icon.svg",url='https://www.youtube.com/@Madhouseproductions',width=28)
+        My social media links
+        c0,c1,c2,c3 = st.columns([0.2,1,1,1],gap='small')
+        with c0:
+            st.write("")
+        with c1:
+            icon_button(icon_path="assets/icons/linkedin_icon.svg",url="https://www.linkedin.com/in/rajdeep-roshan-sahu",width=28)
+        with c2:
+            icon_button(icon_path="assets/icons/github_icon.svg",url='https://www.github.com/Rajdeep108',width=33)
+        with c3:
+            icon_button(icon_path="assets/icons/youtube_icon.svg",url='https://www.youtube.com/@Madhouseproductions',width=28)
 
 
-# Define the icon layout with HTML and CSS
-        icons_html = """
-        <style>
-            .icon-container {
-                display: flex;
-                justify-content: center; /* Centers icons horizontally */
-                align-items: center;
-                gap: 15px; /* Adds spacing between icons */
-                flex-wrap: wrap; /* Allows wrapping on small screens */
-                margin-top: 10px;
-            }
-            .icon-container a {
-                display: inline-block;
-            }
-            .icon-container img {
-                width: 30px; /* Adjust icon size */
-                height: auto;
-            }
-        </style>
-    
-        <div class="icon-container">
-            <a href="https://www.linkedin.com/in/rajdeep-roshan-sahu" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png">
-            </a>
-            <a href="https://www.github.com/Rajdeep108" target="_blank">
-                <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png">
-            </a>
-        </div>
-    """
-    # Render icons in Streamlit
-    st.markdown(icons_html, unsafe_allow_html=True)
-
-
-st.markdown(icons_html, unsafe_allow_html=True)
+        st.markdown(icons_html, unsafe_allow_html=True)
 
         vertical_space(2)
         st.subheader("Navigate")
