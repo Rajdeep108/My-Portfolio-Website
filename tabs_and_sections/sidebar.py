@@ -7,7 +7,18 @@ from functions import *
 #sidebar-------------------------------------
 def entire_sidebar():
     with st.sidebar:
-
+        # mobile scrollability
+        st.markdown("""
+            <style>
+                @media screen and (max-width: 768px) {
+                    [data-testid="stSidebarContent"] {
+                        height: 75vh !important;
+                        max-height: 75vh !important;
+                        overflow-y: scroll !important;
+                    }
+                }
+            </style>
+        """, unsafe_allow_html=True)
         #My round face
         round_image = Image.open("./assets/pictures/me2.png")
         col1, col2, col3 = st.columns([0.8, 2, 1])
