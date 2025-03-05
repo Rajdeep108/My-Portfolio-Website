@@ -58,9 +58,6 @@ def entire_sidebar():
             <a href="https://www.github.com/Rajdeep108" target="_blank">
                 <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png">
             </a>
-            <a href="https://www.youtube.com/@Madhouseproductions" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg">
-            </a>
         </div>
     """
     # Render icons in Streamlit
