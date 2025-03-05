@@ -32,14 +32,26 @@ def load_lottie_json(filepath: str):
     with open(filepath, "r") as f:
         return json.load(f)
         
-def icon_button(icon_path, url,width=40):
-    with open(icon_path, "r") as f:
-        svg_content = f.read()
-    return st.markdown(
-    f"""
-        <a href="{url}" target="_blank" style="text-decoration: none;">
-            <span style="display: inline-block; width: {width}px;">{svg_content}</span>
+def icon_buttons3(icon_path1,icon_path2,icon_path3, width1=28,width2=33,width3=28):
+    with open(icon_path1, "r") as f:
+        svg_content1 = f.read()
+    with open(icon_path2, "r") as f:
+        svg_content2 = f.read()
+    with open(icon_path3, "r") as f:
+        svg_content3 = f.read()
+    st.markdown(
+        f"""
+        <a href="https://www.linkedin.com/in/rajdeep-roshan-sahu" target="_blank" style="text-decoration: none;">
+            <span style="display: inline-block; width: {width1}px; margin-left: 55px; margin-right: 30px;">{svg_content1}
         </a>
+
+        <a href="https://www.github.com/Rajdeep108" target="_blank">
+            <span style="display: inline-block; width: {width2}px; margin-right: 30px">{svg_content2}
+        </a>
+
+        <a href="https://www.youtube.com/@Madhouseproductions" target="_blank" style="text-decoration: none;">
+            <span style="display: inline-block; width: {width3}px;">{svg_content3}</span>
+        </a>     
         """,
         unsafe_allow_html=True
     )
