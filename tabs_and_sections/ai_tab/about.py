@@ -8,7 +8,7 @@ def about_section():
     vertical_space()
 
     chalumn1,chalumn2 = st.columns([0.5,1.5])
-    about_image = Image.open(r"assets\pictures\me3.JPG")
+    about_image = Image.open("assets/pictures/me3.JPG")
 
     with chalumn1:
         small_image = st.image(about_image)
