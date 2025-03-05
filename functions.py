@@ -328,7 +328,7 @@ def slide_images(paths):
 
 .slider img {{
     width: auto;
-    height: 100vh; /* Makes sure the full image is visible */
+    height: auto; /* Makes sure the full image is visible */
     max-height: 500px; /* Adjust this if needed */
     object-fit: contain; /* Ensures the full image is visible */
     background-color: black; /* Avoid blank areas */
