@@ -326,15 +326,11 @@ def slide_images(paths):
         animation: slide {animation_duration}s infinite ease-in-out;
     }}
 
-    .slider img {{
-        width: 100vw; /* Ensure the image width fits the viewport */
-        height: auto; /* Maintain aspect ratio */
-        object-fit: contain; /* Ensure full image visibility */
-    }}
+
   
     @keyframes slide {{
         0% {{ transform: translateX(0%); }}
-        {"".join(f"{(i+1)*(100/num_images)}% {{ transform: translateX(-{(i+1)*(100/num_images)}%);}} " for i in range(num_images))}
+        {"".join(f"{(i+1)*(100/num_images)}% {{ transform: translateX(-{(i+1)*(100/num_images)+50}%);}} " for i in range(num_images))}
         100% {{ transform: translateX(0%); }}
     }}
     </style>
