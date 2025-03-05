@@ -12,12 +12,12 @@ def home_page_section():
         vertical_space(1)
         st.write("#### Hi there")
     with k2:
-        hi_animation = load_lottie_json(r"assets\animations\Hi_animation.json")
+        hi_animation = load_lottie_json("assets/animations/Hi_animation.json")
         st_lottie(hi_animation, width=100, height=100, loop=True)
 
     #Hero image
     column1,column2 = st.columns([1.3, 2])
-    square_image  = Image.open(r"assets\pictures\hero-bg.jpg")
+    square_image  = Image.open("assets/pictures/hero-bg.jpg")
     with column2:
         reomve_top_empty()
         st.image(square_image)
