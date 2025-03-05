@@ -26,9 +26,9 @@ def home_page_section():
     with column1:
         vertical_space(4)
         st.write("# Rajdeep Roshan")
-        kol1,kol2,kol3 = st.columns([0.3,1.5,0.1])
+        kol1,kol2,kol3 = st.columns([0.24,1.5,0.1])
         with kol1:
-            st.markdown("<h4>I'm </h4>", unsafe_allow_html=True)
+             st.write("##### I'm ")
         with kol2:
             typewriter2(word_list=['a Gen AI Developer','an AI/ML Engineer','a Film-maker','an Innovator',"wid pronouns: AI/ML"])
     
