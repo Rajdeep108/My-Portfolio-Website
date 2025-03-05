@@ -20,6 +20,13 @@ from tabs_and_sections.end_section import last_section
 screenANDtitle()
 hide_default_streamlit()
 
+st.markdown(
+    """
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes">
+    """,
+    unsafe_allow_html=True,
+)
+
 #sidebar-------------------------------------------
 entire_sidebar()
 
