@@ -9,7 +9,7 @@ def entire_sidebar():
     with st.sidebar:
 
         #My round face
-        round_image = Image.open("assets/pictures/me2.png")
+        round_image = Image.open("./assets/pictures/me2.png")
         col1, col2, col3 = st.columns([0.8, 2, 1])
         with col2: 
             st.image(round_image, width=150)
