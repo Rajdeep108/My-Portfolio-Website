@@ -327,7 +327,7 @@ def slide_images(paths):
 }}
 
 .slider img {{
-    width: 100vh;
+    width: 100%;
     height: auto; /* Makes sure the full image is visible */
     max-height: 500px; /* Adjust this if needed */
     object-fit: contain; /* Ensures the full image is visible */
