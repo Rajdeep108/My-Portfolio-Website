@@ -1,2 +1,3 @@
 streamlit
 streamlit-scroll-navigation
+streamlit-lottie
