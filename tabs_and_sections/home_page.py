@@ -30,5 +30,5 @@ def home_page_section():
         with kol1:
              st.write("#### I'm ")
         with kol2:
-            typewriter2(word_list=["wid pronouns: AI/ML"])
+            typewriter2(word_list=['a Gen AI Developer','an AI/ML Engineer','a Film-maker','an Innovator',"wid pronouns: AI/ML"])
     
