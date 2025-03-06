@@ -74,8 +74,8 @@ def projects_section():
 
     <div class="custom-text">
             <ul>
-            <li>Utilizes CLIP-based Transformer models from Hugging Face for high-accuracy NSFW content detection.</li>
-            <li>Provides a CLI tool for efficient, on-demand content moderation and analysis.</li>
+            <li>Utilizes CLIP-based Transformer model from Hugging Face for high-accuracy NSFW content detection.</li>
+            <li>Enables efficient content moderation with AI-driven analysis.</li>
             <li>Supports real-time filtering and automated enforcement for user-generated content platforms.</li>
         </ul>
     </div>
